@@ -1,0 +1,107 @@
+Q 1
+
+class Slip_1_1_A{
+    public static void main(String[] args){
+        for(int i=65;i<=90;i++){
+            System.out.println(Character.toString((char)i));
+        }
+    }
+}
+
+
+
+______________________________________________________________________________________________________
+
+Q 2
+
+import java.io.*;
+
+class Slip_1_1_B{
+    public static void main(String args[]) throws IOException{
+        char ch;
+        FileReader fr = new FileReader("a.txt");
+        FileWriter fw = new FileWriter("b.txt");
+        int c;
+        while ((c=fr.read())!=-1){
+            ch=(char)c;
+          if(Character.isDigit(ch)==false){
+              fw.write(c);
+          }
+        }
+        fr.close();
+        fw.close();
+    }
+}
+
+Text Files
+a.txt
+Coding Activity 2022
+
+b.txt
+Coding Activity
+
+______________________________________________________________________________________________________
+
+Q 3
+
+list1=[] 
+n=int(input("Enter number of elements of 
+list:")) 
+print("Enter elements of list: ") 
+for i in range(n): 
+    num=int(input()) 
+    list1.append(num) 
+set1=set(list1) 
+list1=list(set1) 
+#Tgts 
+print(list1) 
+
+
+______________________________________________________________________________________________________
+
+Q 4
+
+from tkinter import * 
+from datetime import date 
+root = Tk() 
+root.geometry("700x500") 
+root.title("Age Calculator") 
+def calculateAge(): 
+    today = date.today() 
+    birthDate = date(int(yearEntry.get()), 
+int(monthEntry.get()), int(dayEntry.get())) 
+    age = today.year - birthDate.year - 
+((today.month, today.day) < (birthDate.month, 
+birthDate.day)) 
+    Label(text=f"{nameValue.get()} your age is 
+{age}").grid(row=6, column=1) 
+Label(text="Name").grid(row=1, column=0, 
+padx=90) 
+Label(text="Year").grid(row=2, column=0) 
+Label(text="Month").grid(row=3, column=0) 
+Label(text="Day").grid(row=4, column=0) 
+nameValue = StringVar() 
+yearValue = StringVar() 
+monthValue = StringVar() 
+dayValue = StringVar() 
+nameEntry = Entry(root, 
+textvariable=nameValue) 
+yearEntry = Entry(root, 
+textvariable=yearValue) 
+monthEntry = Entry(root, 
+textvariable=monthValue) 
+dayEntry = Entry(root, textvariable=dayValue) 
+nameEntry.grid(row=1, column=1, pady=10) 
+yearEntry.grid(row=2, column=1, pady=10) 
+monthEntry.grid(row=3, column=1, pady=10) 
+dayEntry.grid(row=4, column=1, pady=10) 
+ 
+ 
+ 
+computeButton = Button(text="Calculate 
+Age", command=calculateAge) 
+computeButton.grid(row=5, column=1, 
+pady=10) 
+root.mainloop() 
+
+======================================================================================================

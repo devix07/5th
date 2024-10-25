@@ -1,0 +1,183 @@
+Q 1
+
+import java.util.*;
+import java.io.*;
+class Zero extends Exception
+{}
+class slip6a
+{
+ static void check(int num)
+  {
+    int first=0,last=0;
+    last=num%10;
+   
+    if(num>9)
+      {
+        while(num>0)
+         {
+           first=num%10;
+           num=num/10;
+          }
+       }
+       System.out.println("Addition of first and last digit are:"+(first+last));
+    }
+  public static void main(String[] args) throws IOException
+     {
+       
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter number:");
+       int n=sc.nextInt();
+       try
+        {
+          if(n==0)
+          {
+           throw new Zero();
+           }
+           else
+           {
+            check(n);
+           }
+         }
+        catch(Zero e)
+         {
+          System.out.println("Number is zero");
+          }
+    
+     }
+}
+  
+_____________________________________________________________________________________________________________________________________________________
+
+Q 2 
+
+
+import java.util.*;
+
+class slip6b
+{
+ public static void main(String[] args)
+  {
+   int i,j,r,c;
+   Scanner sc=new Scanner(System.in);
+   System.out.println("Enter rows:");
+   r=sc.nextInt();
+   System.out.println("Enter columns:");
+   c=sc.nextInt();
+      
+   int[][] array=new int[r][c];
+  
+   System.out.println("Enter array elements:");
+   for(i=0;i<r;i++)
+    {
+     for(j=0;j<c;j++)
+      {
+       array[i][j]=sc.nextInt();
+      }
+     }
+   
+   System.out.println("Array Elements are:");
+    for(i=0;i<r;i++)
+    {
+     for(j=0;j<c;j++)
+      {
+       System.out.print(" "+array[i][j]);
+      }
+       System.out.println();
+     }
+     
+   
+    System.out.println("Transpose of matrix:");
+    for(i=0;i<r;i++)
+    {
+     for(j=0;j<c;j++)
+      {
+       System.out.print(" "+array[j][i]);
+      }
+       System.out.println();
+     }
+    
+ }
+}
+
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 3
+
+import math
+r=float(input("enter radius:"))
+
+#area of sphere
+areas=4*math.pi*r*r*r
+print("area of sphere:",areas)
+
+#volume of sphere
+vols=4/3*math.pi*r*r*r
+print("volume of sphere:",vols)
+
+#area of cube
+side=float(input("enter side:"))
+print("area of cube:",(6*pow(side,2)))
+
+#volume of cube
+print("volume of cube:",(pow(side,3)))                       
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 4
+
+from tkinter import *
+import tkinter.font
+
+window=tkinter.Tk()
+window.title("font changer")
+window.geometry("500x300")
+
+lb1=Label(text="Python Programming")
+lb1.pack()
+
+sample=tkinter.font.Font(family='Arial',size=10,weight='normal')
+
+font1=tkinter.font.Font(family='Arial',size=30,weight='bold')
+font2=tkinter.font.Font(family='Comic Sans Ms',size=30,weight='normal')
+font3=tkinter.font.Font(family='Calibry',size=30,weight='bold')
+font4=tkinter.font.Font(family='Serif',size=30,weight='normal')
+
+def ischecked():
+    if cb1.get()==1:
+        lb1.configure(font=font1)
+    elif cb1.get()==0:
+        lb1.configure(font=sample)
+
+def ischecked2():
+    if cb2.get()==1:
+        lb1.configure(font=font2)
+    elif cb2.get()==0:
+        lb1.configure(font=sample)
+
+def ischecked3():
+    if cb3.get()==1:
+        lb1.configure(font=font3)
+    elif cb3.get()==0:
+        lb1.configure(font=sample)
+
+def ischecked4():
+    if cb4.get()==1:
+        lb1.configure(font=font4)
+    elif cb4.get()==0:
+        lb1.configure(font=sample)
+
+
+cb1=IntVar()
+cb2=IntVar()
+cb3=IntVar()
+cb4=IntVar()
+
+Checkbutton(window,text='Arial',variable=cb1,onvalue=1,offvalue=0,command=ischecked).place(x=40,y=50)
+Checkbutton(window,text='Comic Sans Ms',variable=cb2,onvalue=1,offvalue=0,command=ischecked2).place(x=40,y=80)
+Checkbutton(window,text='Calibry',variable=cb3,onvalue=1,offvalue=0,command=ischecked3).place(x=40,y=110)
+Checkbutton(window,text='Serif',variable=cb4,onvalue=1,offvalue=0,command=ischecked4).place(x=40,y=140)
+
+window.mainloop()
+
+===================================================================================================================================================

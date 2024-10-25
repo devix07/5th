@@ -1,0 +1,97 @@
+Q 1
+
+class slip18a {
+    void area(float b, float h) {
+        System.out.println("Area of triangle: " + (0.5f * b * h)); 
+    }
+
+    void area(int l, int b) {
+        System.out.println("Area of rectangle: " + (l * b));
+    }
+
+    void area(int r) {
+        System.out.println("Area of circle: " + (Math.PI * r * r)); 
+    }
+
+    public static void main(String[] args) {
+        slip18a obj = new slip18a();
+        obj.area(3.12f, 4.12f);       
+        obj.area(3, 4);               
+        obj.area(3);                      }
+}
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 2
+
+import java.io.*;
+
+class slip18b
+{
+ public static void main(String args[]) throws IOException
+  {
+   FileReader fr=new FileReader("read.txt");
+   FileWriter fw=new FileWriter("demo.txt");
+
+   int c;
+    while((c = fr.read()) != -1)
+    {
+        if(Character.isDigit(c)==false)
+         {
+          if(Character.isUpperCase(c))
+           {
+           fw.write(Character.toLowerCase(c));
+           }
+            else if(Character.isLowerCase(c))
+            {
+            fw.write(Character.toUpperCase(c));
+            }
+         }
+        
+          else
+           {
+           fw.write("*");
+           }
+    }
+
+fr.close();
+fw.close();
+  }
+}
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 3
+
+def print_list(mylist): 
+for i in mylist: 
+if i<5: 
+print(i) 
+mylist=[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] 
+print_list(mylist) 
+
+_________________________________________________________________________________________________________________________________________________
+
+Q 4 
+
+
+class person: 
+    def __init__(self,name,address): 
+        self.empname=name 
+        self.address=address 
+    def display(self): 
+        print('name : {}\taddress : {}\tsalary : 
+{}'.format(self.empname, 
+        self.address,a.getsalary())) 
+class employee(person): 
+    def __init__(self, name, address,salary): 
+        super().__init__(name, address) 
+        self.salary=salary 
+    def getsalary(self): 
+        return self.salary 
+name1=input('enter name : ') 
+address=input('enter address : ') 
+salary=int(input('enter salary : ')) 
+a=employee(name1,address,salary) 
+a.display()    
+===================================================================================================================================================

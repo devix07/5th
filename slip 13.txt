@@ -1,0 +1,92 @@
+Q 1
+
+import java.util.*;
+
+
+public class slip13a {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+        // Asking for the number of integers
+        System.out.print("Enter the number of integers you want to input: ");
+        int n = scanner.nextInt();
+
+        // Reading the integers
+        System.out.println("Enter " + n + " integers:");
+        for (int i = 0; i < n; i++) {
+            int number = scanner.nextInt();
+            numbers.add(number);  // Add each number to the ArrayList
+        }
+
+        // Displaying the ArrayList in reverse order
+        System.out.println("Elements in reverse order:");
+        Collections.reverse(numbers);  // Reverse the ArrayList
+        for (int num : numbers) {
+            System.out.print(num + " ");
+        }
+        System.out.println(); // Add a line break after the output
+
+        // Closing the scanner
+        scanner.close();
+    }
+}
+
+_____________________________________________________________________________________________________________________________________________________________________________________
+
+
+Q 2
+
+import java.util.*;
+
+class slip13b
+{
+public static void main(String args[])
+{
+ String str;
+  
+ Scanner sc=new Scanner(System.in);
+ try
+ {
+ System.out.println("enter string:");
+ str=sc.next();
+System.out.println("Hello, " + str.toUpperCase() + ", Nice To Meet You!!");
+ }
+ catch(Exception e)
+  {
+  }
+}
+}
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 3
+
+try: 
+    num=int(input('Enter a number :')) 
+except ValueError: 
+    print("\nThis is not a number!") 
+else: 
+    print('\nnumber is : ',num) 
+
+___________________________________________________________________________________________________________________
+
+Q 4 
+
+n=int(input("Enter size of queue: ")) 
+print("Enter elements of queue: ") 
+mylist=list() 
+for i in range(n): 
+    ele=input() 
+    mylist.append(ele) 
+print("Current queue:- ") 
+print(mylist) 
+print("\n") 
+for j in range(len(mylist)): 
+    print(mylist) 
+    pop_ele=mylist.pop(0) 
+    print(pop_ele) 
+
+
+===================================================================================================================================================

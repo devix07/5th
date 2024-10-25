@@ -1,0 +1,109 @@
+Q 1
+
+import java.util.*;
+
+public class slip25a
+{
+  public static void main(String arg[])
+   {
+     int i=0,h=0;
+     Scanner sc= new Scanner(System.in);
+     try
+      {
+        System.out.println("enter string: ");
+        String str=sc.next();
+        int lnt=str.length()-1;
+          
+while(i< lnt)
+{
+  if(str.charAt(i++)!=str.charAt(lnt--))
+   {
+     h=h+i;
+    }
+}
+if(h > 0)
+  {
+    System.out.println("string is not palindrome");
+   }
+else
+{
+System.out.println("string is palindrome");
+}
+}
+catch(Exception e){}
+}
+}
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 2
+
+import series.*;
+
+class slip25b
+{
+ public static void main(String[] args)
+  {
+   fib Fib=new fib();
+   Fib.fibo();
+   
+   cub Cub=new cub();
+   Cub.cube();
+   
+   sqr Sqr=new sqr();
+   Sqr.square();
+   
+  }
+}
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 3
+
+string=input('enter a string : ') 
+up=low=ele=0 
+for x in string: 
+    if x.isupper(): 
+        up+=1 
+    elif x.islower(): 
+        low+=1 
+    else: 
+        ele+=1 
+print('No. of Upper case characters : ',up) 
+print('No. of Lower case characters : ',low) 
+print('other special symbols',ele) 
+
+______________________________________________________________________________________________________________________________________________________
+
+Q 4 
+
+
+class Calculator: 
+    def __init__(self,num1,num2,operation): 
+        self.num1=num1 
+        self.num2=num2 
+        self.operation=operation 
+        if self.operation=='*': 
+            print('Multiplication of {} and {} is : 
+'.format(num1,num2), 
+                self.num1*self.num2) 
+             
+        elif self.operation=='/': 
+            print('division of {} and {} is : 
+'.format(num1,num2), 
+                self.num1/self.num2) 
+        elif self.operation=='-': 
+            print('Subtraction of {} and {} is : 
+'.format(num1,num2), 
+                self.num1/self.num2) 
+        elif self.operation=='+': 
+            print('Addition of {} and {} is : 
+'.format(num1,num2), 
+                self.num1+self.num2) 
+num1=int(input('Enter 1st number : ')) 
+operator1=input('ENTER A CALCULATOR 
+OPERATOR FROM FOLLOWING : / , * , - ,  +\n') 
+num2=int(input('Enter 2st number : '))        
+Calculator(num1,num2,operator1)
+        
+===================================================================================================================================================

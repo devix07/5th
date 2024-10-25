@@ -1,0 +1,83 @@
+Q 1
+
+class slip12a
+{
+public static void main(String args[])
+{
+String arr[]={"ashoka","college"};
+for(int i=arr.length-1;i>=0;i--)
+{
+System.out.print(arr[i]+" ");
+}
+}
+}
+
+_____________________________________________________________________________________________________________________________________________________________________________________
+ 
+
+Q 2 
+
+
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+
+public class slip12b extends JFrame implements ActionListener {
+    JButton b1 = new JButton("Show");
+    JComboBox Multi = new JComboBox(new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"});
+    JTextArea output = new JTextArea(10, 20);
+
+    public slip12b() {
+        add(Multi); add(b1); add(new JScrollPane(output));
+        b1.addActionListener(this);
+        output.setEditable(false);
+        setLayout(new FlowLayout());
+        setSize(300, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        int num = Integer.parseInt((String) Multi.getSelectedItem());
+        output.setText("");
+        for (int i = 1; i <= 10; i++)
+            output.append(num + " * " + i + " = " + (num * i) + "\n");
+    }
+
+    public static void main(String[] args) {
+        new slip12b();
+    }
+}
+
+_____________________________________________________________________________________________________________________________________________________________________________________
+
+Q 3
+
+
+from tkinter import Label, Tk 
+top=Tk() 
+top.title="font style" 
+label=Label(top,text="this is text with 
+style",font=("Helvetica",25)) 
+label.pack() 
+top.mainloop() 
+___________________________________________________________________________________________________________________________________________________________
+
+Q 4 
+
+import collections 
+str1 = input('Enter a string : ') 
+d = collections.defaultdict(int) 
+for c in str1: 
+    if c ==' ': 
+        continue 
+    d[c] += 1 
+for c in sorted(d, key=d.get): 
+    if d[c] > 1: 
+        print('%s - %d' % (c, d[c])) 
+
+
+===================================================================================================================================================
+
+
+

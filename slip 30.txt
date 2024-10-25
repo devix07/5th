@@ -1,0 +1,128 @@
+Q 1
+
+import java.io.*;
+import java.util.Scanner;
+class abc extends Exception{}
+
+class slip{
+
+    public static void main( String args[]){
+
+        int r,sum=0,temp; 
+
+        int n;
+        Scanner dr=new Scanner(System.in);
+
+        try {
+
+            System.out.print("Enter Number : ");
+
+            n = dr.nextInt();
+
+            if(n==0){
+
+                throw new abc();
+
+            }else{
+
+                temp=n; 
+
+                while(n>0){ 
+
+                    r=n%10;
+
+                    sum=(sum*10)+r; 
+
+                    n=n/10; 
+
+                } 
+
+                if(temp==sum){
+
+                    System.out.println("It is Palindrome Number "); 
+
+                }else{
+
+                    System.out.println("Not Palindrome");
+
+                }
+
+            }
+
+        } catch (abc nz) {
+
+            System.out.println("Number is 0");
+
+        }
+
+        catch (NumberFormatException e){
+
+            System.out.println("Invalid Number ");
+
+        }
+
+        catch (Exception e){}
+
+    }
+
+}
+
+_____________________________________________________________________________________________________________________________________________________
+
+
+Q 2
+
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 3
+
+import tkinter as tk 
+window = tk.Tk() 
+def check(): 
+    string = entry1.get() 
+    lbl2.configure(text = string) 
+    character = entry2.get() 
+    lbl3.configure(text = string.count(character)) 
+entry1 = tk.Entry(window) 
+entry1.pack() 
+entry2 = tk.Entry(window) 
+entry2.pack() 
+btn = tk.Button(window, text="check" , 
+command = check) 
+btn.pack() 
+lbl1 = tk.Label(window,text = "Original string") 
+lbl1.pack() 
+lbl2 = tk.Label(window,text = "") 
+lbl2.pack() 
+lbl3 = tk.Label(window,text = "") 
+lbl3.pack() 
+window.mainloop() 
+Q 4 
+class country: 
+ 
+    def accept(self): 
+        self.cname = input("enter country 
+name:") 
+        self.nationality=input("enter nationality:") 
+ 
+    def print_cname(self): 
+        print(self.cname) 
+ 
+    def print_nationality(self): 
+        print(self.nationality) 
+ 
+class state(country): 
+ 
+    def printstate(self): 
+        self.state=input("enter state:") 
+        print(self.state) 
+ 
+obj=state() 
+ 
+obj.accept() 
+obj.printstate() 
+obj.print_cname() 
+obj.print_nationality() 
+
+===================================================================================================================================================

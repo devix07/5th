@@ -1,0 +1,126 @@
+Q 1
+
+import java.util.*;
+
+public class slip16a
+{
+int sum=0;
+public static void main(String args[])
+{
+int n;
+Scanner sc=new Scanner(System.in);
+System.out.print("enter number:");
+n=sc.nextInt();
+
+slip16a obj=new slip16a();
+
+int a=obj.sumdigit(n);
+
+System.out.println("sum f digit is:"+a);
+}
+
+int sumdigit(int n)
+{
+sum=n%10;
+if(n==0)
+{
+return 0;
+}
+else
+{
+return sum+sumdigit(n/10);
+}
+}
+}
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 2
+
+import java.util.*;
+class slip16b
+{
+static String[] str=new String[5];
+static Scanner sc=new Scanner(System.in);
+static ArrayList<String> list=new ArrayList<String>();
+
+public static void main(String args[])
+{
+for(int i=0;i<str.length;i++)
+{
+System.out.println("insert employee details:");
+str[i]=sc.next();
+list.add(str[i]);
+}
+Collections.sort(list);
+System.out.println(list);
+}
+}
+
+_____________________________________________________________________________________________________________________________________________________________________________________
+
+
+Q 3 
+
+class rectangle: 
+def __init__(self,length,width): 
+self.length=length 
+self.width=width def area(self): 
+return self.length*self.width 
+ 
+def perimeter(self): 
+return 2*(self.length+self.width) 
+length=int(input("Enter length: ")) 
+width=int(input("Enter Width: ")) 
+obj1=rectangle(length,width) print("Area: 
+",obj1.area()) 
+print("Perimeter: ",obj1.perimeter()) 
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 4
+
+import tkinter as tk
+
+window=tk.Tk()
+window.geometry("500x500")
+
+def additem():
+    listbox.insert(tk.END,content.get())
+
+def delitem():
+    listbox.delete(tk.ANCHOR)
+
+def printitem():
+    for i in listbox.curselection():
+        lb1.config(text=listbox.get(i))
+    
+
+
+
+content=tk.StringVar()
+entry=tk.Entry(window,textvariable=content)
+entry.pack()
+
+buttonadd=tk.Button(window,text="add item",command=additem)
+buttonadd.pack()
+
+buttondel=tk.Button(window,text="delete item",command=delitem)
+buttondel.pack()
+
+buttonpri=tk.Button(window,text="print item",command=printitem)
+buttonpri.pack()
+
+lb1=tk.Label(window,text="")
+lb1.pack()
+
+listbox=tk.Listbox(window)
+listbox.pack()
+
+
+
+
+
+window.mainloop()
+
+===================================================================================================================================================

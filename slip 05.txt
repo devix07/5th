@@ -1,0 +1,100 @@
+Q1
+
+public class slip5a
+{
+public static void main(String args[])
+{
+int n=5;
+for(int i=5;i>=1;i--)
+{
+ for(int j=i;j<=n;j++)
+ {
+System.out.print(j+" ");
+}
+System.out.println();
+}	
+}
+}
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 2
+
+import java.io.File;
+
+public class slip5b {
+
+    public static void main(String[] args) {
+        // Check if arguments are provided
+        if (args.length == 0) {
+            System.out.println("Please provide file names as command-line arguments.");
+            return;
+        }
+
+        // Iterate through the provided file names
+        for (String fileName : args) {
+            File file = new File(fileName);
+
+            // Check if file exists
+            if (!file.exists()) {
+                System.out.println("File not found: " + fileName);
+                continue;
+            }
+
+            // Check if the file is a .txt file and delete if true
+            if (fileName.endsWith(".txt")) {
+                if (file.delete()) {
+                    System.out.println("Deleted file: " + fileName);
+                } else {
+                    System.out.println("Failed to delete file: " + fileName);
+                }
+            } else {
+                // Display file information if it's not a .txt file
+                System.out.println("File Name: " + file.getName());
+                System.out.println("Location: " + file.getAbsolutePath());
+                System.out.println("Size: " + file.length() + " bytes");
+                System.out.println("-----------------------------------------");
+            }
+        }
+    }
+}
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 3
+
+class str_mod: 
+    def get_string(self): 
+        self.str=input("Enter Your Name: ") 
+ 
+    def put_string(self): 
+        print(self.str.upper()) 
+ 
+obj1=str_mod() 
+obj1.get_string() 
+obj1.put_string() 
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 4
+
+def Fibo(terms2): 
+    f1=0 
+    yield f1 
+    f2=1 
+    yield f2 
+    for i in range(0,terms2-2): 
+        f3=f1+f2 
+        yield f3 
+        f1=f2 
+        f2=f3 
+#mainbody 
+terms1=int(input("How many terms: ")) 
+gen=Fibo(terms1) 
+while True: 
+    try: 
+        print(next(gen)) 
+    except StopIteration: 
+        break 
+
+======================================================================================================================================================

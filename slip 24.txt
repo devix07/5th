@@ -1,0 +1,189 @@
+Q 1
+
+import java.io.*;
+
+class Slip24A{
+
+    public static void main(String args[]) throws IOException{
+
+        FileReader fr = new FileReader("a.txt");
+
+        int c;
+
+        int letter=0;
+
+        int space=0;
+
+        int num=0;
+
+        int other=0;
+
+ 
+
+        while ((c=fr.read())!=-1){
+
+          if(Character.isDigit(c)){
+
+            num ++;
+
+          }else if(Character.isLetter(c)){
+
+            letter++;
+
+          }else if(Character.isSpaceChar(c)){
+
+            space++;
+
+          }else{
+
+              other ++;
+
+          }
+
+        }
+
+       System.out.println("Numbers : " + num + "\nLetters : "+letter+"\nSpace : "+space+"\nSpecial Characters : "+other);
+
+        fr.close();
+
+        fw.close();
+
+    }
+
+}
+
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 2
+
+
+import ts.*;
+import java.util.Scanner;
+
+
+public class slip24b {
+    public static void main(String[] args) {
+        int n;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the number of students & teachers: ");
+        n = sc.nextInt();
+        Student[] s=new Student[n];
+        for (int i = 0; i < n; i++) {
+            System.out.println("\nEnter Student " + (i + 1) + " details: ");
+
+            System.out.println("Enter Student Roll No: ");
+            int rno = sc.nextInt();
+
+            System.out.println("Enter Student name: ");
+            String sname = sc.next();
+
+            System.out.print("Enter percentage: ");
+            int per = sc.nextInt();
+
+           
+            s[i] = new Student(rno, sname,per);
+            s[i].display();
+        }
+
+
+
+
+
+        Teacher[] t = new Teacher[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("\nEnter teacher " + (i + 1) + " details: ");
+
+            System.out.print("Enter teacher ID: ");
+            int tid = sc.nextInt();
+
+            System.out.print("Enter teacher name: ");
+            String tname = sc.next();
+
+            System.out.print("Enter subject: ");
+            String subject = sc.next();
+            t[i] = new Teacher(tid, tname, subject);
+        }
+
+        System.out.println("\nTeachers who teaches Java subject:");
+        for (int i = 0; i < n; i++) {
+            if (t[i].getSubject().equals("Java")) {
+                t[i].display();
+            }
+        }
+        sc.close();
+    }
+}
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 3
+
+
+
+
+Q 3 
+class factorial(): 
+    def __init__(self,num): 
+        self.num=num 
+        factnum=1 
+        if self.num<0: 
+            print("Sorry, factorial does not exist for 
+negative numbers") 
+        elif self.num==0: 
+            print("The factorial of 0 is 1") 
+        else: 
+            for i in range(1,num+1): 
+                factnum=factnum*i 
+            print('The factorial of {} is {} 
+factorial'.format(num,factnum)) 
+ 
+num = int(input("Enter a number: ")) 
+if num > 1: 
+    for i in range(2,num): 
+        if (num % i) == 0: 
+            print(num,"is not a prime number") 
+            print(i,"times",num//i,"is",num) 
+            break 
+    else: 
+        print(num,"is a prime number") 
+else: 
+   print(num,"is not a prime number") 
+factorial(num) 
+
+______________________________________________________________________________________________________
+
+Q 4 
+
+
+import java.io.*; 
+class Slip24A{ 
+    public static void main(String args[]) throws 
+IOException{ 
+        FileReader fr = new FileReader("a.txt"); 
+        int c; 
+        int letter=0; 
+        int space=0; 
+        int num=0; 
+        int other=0; 
+        while ((c=fr.read())!=-1){ 
+          if(Character.isDigit(c)){ 
+            num ++; 
+          }else if(Character.isLetter(c)){ 
+            letter++; 
+          }else if(Character.isSpaceChar(c)){ 
+            space++; 
+          }else{ 
+              other ++; 
+          } 
+        } 
+       System.out.println("Numbers : " + num + 
+"\nLetters : "+letter+"\nSpace : 
+"+space+"\nSpecial Characters : "+other); 
+        fr.close(); 
+        fw.close(); 
+    } 
+} 
+===================================================================================================================================================

@@ -1,0 +1,168 @@
+Q 1
+
+class slip9a
+{
+public static void main(String arg[])
+{
+int k=1;
+for(int i=1;i<=4;i++)
+{
+for(int j=1;j<=i;j++)
+{
+System.out.print(k%2+"");
+k++;
+}
+System.out.println(" ");
+}
+}
+}
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 2
+
+import java.util.*;
+import java.io.*;
+import java.util.regex.*;
+class invalid extends Exception
+{}
+
+class slip9b
+{
+  public static void main(String[] args) throws IOException
+   {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("************MENU**************");
+    System.out.println("1.Check mobile_no:");
+    System.out.println("2.Check PAN no:");
+    try{
+    System.out.println("Enter your choice:");
+    int n=sc.nextInt();
+     
+    switch(n)
+     {
+      case 1:String mregex="[789][0-9]{9}";
+             System.out.println("Enter mobile number:");
+             String no=sc.next();
+             if(!Pattern.matches(mregex,no))
+               {
+                 System.out.println("Invalid mobile no");
+               }
+             else
+               {
+                System.out.println("Valid mobile NO:"+no);
+                }
+
+             break;
+
+      case 2:String pregex="[A-Z]{5}[0-9]{4}[A-Z]{1}";
+             System.out.println("Enter PAN number:");
+             String pno=sc.next();
+             if(!Pattern.matches(pregex,pno))
+               {
+                 System.out.println("Invalid pan no");
+               }
+             else
+               {
+                System.out.println("Valid PAN NO:"+pno);
+                }
+
+             break;
+      default:throw new invalid();
+     }
+
+     }
+    catch(invalid e)
+     {
+      System.out.println("Invalid data");
+     } 
+    
+
+    }
+ }
+
+   
+_____________________________________________________________________________________________________________________________________________________
+
+Q 3
+
+def reverse_words(s): 
+    return ' '.join(reversed(s.split())) 
+ 
+str1=input('Enter a string : ') 
+print(reverse_words(str1)) 
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 4
+
+from tkinter import* 
+def perfect(): 
+    number=int(numberFeald.get()) 
+    count = 0 
+    for i in range(1, number): 
+        if number % i == 0: 
+            count = count + i 
+    if count == number: 
+        perfect1.select() 
+        print(number, 'The number is a Perfect 
+number!') 
+    else: 
+        perfect1.deselect() 
+        print(number, 'The number is not a 
+Perfect number!') 
+def armstrong(): 
+    number=int(numberFeald.get()) 
+    count = 0 
+    temp = number 
+    while temp > 0: 
+        digit = temp % 10 
+        count += digit ** 3 
+        temp //= 10  
+    if number == count: 
+        armstrong1.select() 
+        print(number, 'is an Armstrong number') 
+    else: 
+        armstrong1.deselect() 
+        print(number, 'is not an Armstrong 
+number') 
+def prime(): 
+    number=int(numberFeald.get()) 
+    if number > 1: 
+        for i in range(2,number): 
+            if (number % i) == 0: 
+                prime1.deselect() 
+                print(number,"is not a prime 
+number") 
+              print(i,"times",number//i,"is",number) 
+                break 
+            else: 
+                prime1.select() 
+                print(number,"is a prime number") 
+    else: 
+        prime1.deselect() 
+        print(number,"is not a prime number") 
+root=Tk() 
+root.title('Prime, Perfect or Armstrong 
+number') 
+root.geometry('300x200') 
+numberFeald=Entry(root) 
+numberFeald.pack() 
+Button1=Button(root,text='Button',command=
+ lambda:[armstrong(),prime(),perfect()]) 
+Button1.pack() 
+prime2=IntVar() 
+perfect2=IntVar() 
+armstrong2=IntVar() 
+armstrong1=Radiobutton(root,text='armstron
+ g',variable=armstrong2,value=1) 
+prime1=Radiobutton(root,text='prime',variabl
+ e=prime2,value=1) 
+perfect1=Radiobutton(root,text='perfect',varia
+ ble=perfect2,value=1) 
+armstrong1.pack() 
+prime1.pack() 
+perfect1.pack() 
+root.mainloop() 
+
+===================================================================================================================================================

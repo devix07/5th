@@ -1,0 +1,176 @@
+Q 1 
+
+import java.util.*;
+public class slip3a
+{
+static int temp;
+ public static void main(String args[])
+ {
+  Scanner ob=new Scanner(System.in);
+   System.out.println("enter number:");
+    int num=ob.nextInt();
+
+
+    int sum=0,rem;
+    temp=num;
+    while(num>0)
+    {
+      rem=num%10;
+      sum=sum+(rem*rem*rem);
+       num=num/10;
+   }
+if(sum==temp)
+{
+ System.out.println("armstrong number");
+}
+else
+{
+System.out.println("not armstrong ");
+}
+}
+}
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 2
+
+abstract class Shape
+{
+abstract double area();
+abstract double volume();
+}
+
+class Cone extends Shape
+{
+private double radius;
+private double height;
+private double slaneHeight;
+
+public Cone(double radius,double height)
+{
+this.radius=radius;
+this.height=height;
+this.slaneHeight=Math.sqrt(radius*radius+height*height);
+}
+
+double area()
+{
+return Math.PI*radius*(radius+slaneHeight);
+}
+double volume()
+{
+return (1.0/3.0)*Math.PI*radius*radius*height;
+}
+}
+
+class Cylinder extends Shape
+{
+private double radius;
+private double height;
+
+public Cylinder(double radius,double height)
+{
+this.radius=radius;
+this.height=height;
+}
+
+double area()
+{
+return 2*Math.PI*radius*(radius+height);
+}
+
+double volume()
+{
+return Math.PI*radius*radius*height;
+}
+}
+
+public class slip3b
+{
+public static void main(String[] args)
+{
+Cone cone=new Cone(5,10);
+System.out.println("cone:");
+System.out.println("area:"+cone.area());
+System.out.println("volume:"+cone.volume());
+
+Cylinder cylinder=new Cylinder(5,10);
+System.out.println("cylinder:");
+System.out.println("area:"+cylinder.area());
+System.out.println("volume:"+cylinder.volume());
+}
+}
+
+_____________________________________________________________________________________________________________________________________________________
+
+Q 3
+
+dict = {'Mon':3,'Tue':5,'Wed':6,'Thu':9} 
+print("The given dictionary : ",dict) 
+check_key = input("Enter Key to check: ") 
+check_value = input("Enter Value: ") 
+if check_key in dict: 
+    print(check_key,"is Present.") 
+    dict.pop(check_key) 
+    dict[check_key]=check_value 
+    print("Updated dictionary : ",dict) 
+else: 
+    print(check_key, " is not Present.") 
+    dict[check_key]=check_value 
+    print("Updated dictionary : ",dict) 
+
+
+______________________________________________________________________________________________________________________________________________________
+
+@ 4
+
+class Student: 
+    def __init__(self): 
+        pass 
+    def GetStudent(self): 
+        self.Name=input("Enter Student Name: ") 
+        self.RollNo=int(input("Enter Student Roll 
+No: ")) 
+        self.Age=int(input("Enter Student Age: ")) 
+        self.Gender=input("Enter Student 
+Gender: ") 
+    def PutStudent(self): 
+        print("Student Name:",self.Name) 
+        print("Student Roll No:",self.RollNo) 
+        print("Student Age:",self.Age) 
+        print("Student Gender:",self.Gender) 
+class Test(Student): 
+    def __init__(self): 
+        pass 
+        Student.__init__(self) 
+    def GetMarks(self): 
+        self.MarkPy=int(input("Enter Marks of 
+Python Subject: ")) 
+        self.MarkJava=int(input("Enter Marks of 
+Java Subject: ")) 
+        self.MarkCS=int(input("Enter Marks of 
+Cyber Security Subject: ")) 
+    def PutMarks(self): 
+        print("Python Marks:", self.MarkPy) 
+        print("Java Marks:", self.MarkJava) 
+        print("Cyber Security Marks:", 
+self.MarkCS) 
+        print("Total 
+Marks:",self.MarkPy+self.MarkJava+self.Mark
+ CS) 
+  
+n=int(input("Enter Number of Students: ")) 
+lst=[] 
+for i in range(n): 
+    print("\nEnter Details of Student",i+1) 
+    obj=f"Student{i}" 
+    lst.append(obj) 
+    lst[i]=Test() 
+    lst[i].GetStudent() 
+    lst[i].GetMarks() 
+for j in range(n): 
+    print("\nDisplay Details of Student",j+1) 
+    lst[j].PutStudent() 
+    lst[j].PutMarks()
+
+=====================================================================================================================================================
